@@ -1270,13 +1270,13 @@ function Landing() {
     className: "font-bold"
   }, p.name), React.createElement("p", {
     className: "text-xs text-ink-500"
-  }, durationLabel((p.durations || [{
+  }, durationLabel(((p.durations && p.durations[0]) || {
     m: 1
-  }])[0].m)))), React.createElement("p", {
+  }).m)))), React.createElement("p", {
     className: "font-display text-2xl font-bold text-emerald2-500"
-  }, fmt((p.durations || [{
+  }, fmt(((p.durations && p.durations[0]) || {
     p: 0
-  }])[0].p), " DT"))))))), React.createElement("section", {
+  }).p), " DT"))))))), React.createElement("section", {
     className: "bg-emerald2-500 py-10"
   }, React.createElement("div", {
     className: "max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8"
